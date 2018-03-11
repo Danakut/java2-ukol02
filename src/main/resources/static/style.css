@@ -10,8 +10,8 @@ body {
 
 .header {
     width: 100%;
-    min-height: 550px;
-    padding: 100px;
+    min-height: 600px;
+    padding: 120px;
     background: url("./images/deluxe-bg.jpg");
     background-repeat: repeat;
 }
@@ -20,7 +20,7 @@ body {
     /*color: #fffae4;          skorobila
     color: #ffecb6;          zlata
     color: #270318;             fialova*/
-    margin-top: 70px;
+    margin-top: 90px;
     margin-bottom: 30px;
     color: #ff6d10;         /* oranzova  */
     font-family: 'Poiret One', cursive;
@@ -41,6 +41,7 @@ body {
 
 .header p {
     width: 50%;
+    max-width: 650px;
     margin: 0 auto;
     color: rgba(255, 109, 16, 0.4);
     /*color: rgba(255, 236, 182, 0.4);   */
@@ -50,31 +51,69 @@ body {
 }
 
 .main_content {
-    margin: 30px 30px;
+    margin: 60px auto;
     width: calc(100% - 60px);
+    max-width: 1600px;
 }
 
 .button {
     display: inline-block;
     vertical-align: top;
-    width: 150px;
-    height: calc(150px / 282 * 233);
+    width: 200px;
+    height: calc(200px / 282 * 233);
+
     background-color: #ffecb6;
     background-image: url("./images/logo.png");
-    background-size: cover;
+    background-size: 180px;
+    background-repeat: no-repeat;
     background-position: center;
-    border-radius: 10%;
+    border-radius: 3px;
+}
+
+.button:hover {
+    box-shadow: inset 10px 10px 10px #ff6d10, inset -10px -10px 10px #ff6d10;
 }
 
 .image {
     display: inline-block;
+    position: relative;
     margin-left: 30px;
-    max-width: 1200px;
+    max-width: 1366px;
     border: 3px solid #ffecb6;
-    border-radius: 10px;
+    border: 5px solid #ffecb6;
 }
 
 .image img {
     width: 100%;
+}
+
+.caption {
+    position: absolute;
+    width: 50%;
+    padding: 10px;
+    margin: 30px 0 0 30px;
+    color: #fffae4;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    border: none;
+
+}
+
+.caption:hover {
+    background: rgba(255, 109, 16, 0.5);
+    box-shadow: 5px 5px 20px 15px rgba(255, 109, 16, 0.3), -5px -5px 10px 15px rgba(255, 109, 16, 0.3);
+  }
+
+.caption p {
+  
+    margin: 10px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.caption h4 {
+    margin: 0;
+    font-weight: 400;
+    text-align: right;
 }
 
