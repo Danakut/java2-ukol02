@@ -14,13 +14,13 @@
 <body>
     <header>
         <div class="header">
-            <p>In memory and anticipation of the newest episode of <strong>Living World: Season 4</strong> in Guild Wars 2.</p>
+            <p>In memory and anticipation of the newest episode of <strong>Living World: Season&nbsp4</strong> in Guild Wars&nbsp2.</p>
             <br>
             <p>The one that, sadly, I have currently no time to play through.</p>
             <a href="./index.html">
                 <div class="home">
                     <h1>A Bug in the System</h1>
-                    <h2>a pic &amp quote generator for the Java 2 course</h2>
+                    <h2>a pic &amp quote generator for the Java&nbsp2 course</h2>
                 </div>
             </a>
         </div>
@@ -36,12 +36,12 @@
             <div class="image">
                 <div class="caption">
                     <!--/*@thymesVar id="citace" type="java.lang.String"*/-->
-                    <p th:text="${citace}">If Thymeleaf template works, there is a quote here.</p>
+                    <p th:text="${citace}">If Thymeleaf template works, there is a quote here.</span></p>
                     <!--/*@thymesVar id="autor" type="java.lang.String"*/-->
-                    <h4 th:text="${autor}">And here is the author of the quote.</h4>
+                    <h4>- <span th:text="${autor}">And here is the author of the quote.</span></h4>
                 </div>
                 <!--/*@thymesVar id="obrazek" type="java.lang.String"*/-->
-                <img th:src="${obrazek}" src="nejakaCesta/nejakyObrazek">
+                <img th:src="${obrazek}" src="./images/pics/pic01.jpg">
             </div>
         </div>
     </main>

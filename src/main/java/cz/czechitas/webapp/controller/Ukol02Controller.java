@@ -34,7 +34,7 @@ public class Ukol02Controller {
             "I was deceived by the fallen god Balthazar. I led him here to claim spirits for his army. In exchange, I was promised a share of his new recruits. But he betrayed me and stranded me here instead. Perfidy! From now on, the only god I trust is me. | Palawa Joko",
             "Some gods just need to have their immortality revoked. | Lady Kasmeer Meade",
             "Leading a borrowed army of corpses into battle against the god of war? Wish I'd known this was your plan when I bet on you at the casino. | Canach",
-            "You think before you guys pack up and head home you could maybe do something about those pesky sand sharks? They're the worst | an Amnoon noble",
+            "You think before you guys pack up and head home you could maybe do something about those pesky sand sharks? They're the worst. | an Amnoon noble",
             "For the last time, I am not a grouchy cactus man. Nor am I a giant talking choya. You urchins have the manners of a fifthborn. | Canach",
             "It's embarrassing to think that Dragon's Watch has been reduced to dragon babysitting. | Rytlock Brimstone",
             "Now that you've convinced them the world is in absolutely no danger... Why not join us outside so we can figure out how to keep it from exploding into a million pieces? | Canach",
@@ -83,12 +83,8 @@ public class Ukol02Controller {
 
         String text = TEXTY.get(cisloTextu);
         int delitko = text.indexOf("|");
-        String citace = new String ("\"");
-        citace += text.substring(0, delitko);
-        text.trim();
-        citace += "\"";
-        String autor = new String ("- ");
-        autor += text.substring(delitko+1);
+        String citace = text.substring(0, delitko-1);
+        String autor = text.substring(delitko+2);
         drzakNaDataAJmenoStranky.addObject("citace", citace);
         drzakNaDataAJmenoStranky.addObject("autor", autor);
 
