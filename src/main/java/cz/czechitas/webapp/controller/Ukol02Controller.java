@@ -1,5 +1,6 @@
 package cz.czechitas.webapp.controller;
 
+import java.io.*;
 import java.util.*;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
@@ -12,15 +13,15 @@ public class Ukol02Controller {
 
     private static final List<String> TEXTY = Arrays.asList(
             "I'm lending you my personal airship to get to Amnoon. Keep it in one piece. Heard you don't have the best track record with 'em. | Captain Ellen Kiel",
-    "Best of luck, Commander. It's a powder keg over there, and that maniac has already lit the fuse. | Captain Ellen Kiel",
-    "Heading for the desert, Commander? Swordmaster Faren, Lord of Beetletun, is ready! Let chaos-bringers and quaggan-kickers alike beware! | Lord Faren",
-    "Faren, my friend, never call someone who's about to cross the ocean \"chum\". | Catrine Evenstead",
-    "That's why I love this town: even our leaders live by the rule \"it's easier to get forgiveness than permission\" | Sheriff Turma",
-    "I can't believe one of the gods we worship, one of the Six, just... gave up on us. Doesn't care. It... doesn't feel right. | Lady Kasmeer Meade",
-    "A council actually making a practical and timely desicion? Call the town crier - this has to be a first. | Rytlock Brimstone",
-    "You've build a marvelous casino, Zalambur. My troops have been enjoying it. And now they will enjoy razing it to the ground. | Archon Iberu",
-    "I'm full of unwise ideas. But protecting the living from an undead army isn't one of them. | Catrine Evenstead",
-    "I still hear the screams - I ran when it started, and... Oh, Dwayna forgive me. I'm a coward. I should've died with them. |  a refugee near Amnoon",
+        "Best of luck, Commander. It's a powder keg over there, and that maniac has already lit the fuse. | Captain Ellen Kiel",
+        "Heading for the desert, Commander? Swordmaster Faren, Lord of Beetletun, is ready! Let chaos-bringers and quaggan-kickers alike beware! | Lord Faren",
+        "Faren, my friend, never call someone who's about to cross the ocean \"chum\". | Catrine Evenstead",
+        "That's why I love this town: even our leaders live by the rule \"it's easier to get forgiveness than permission\". | Sheriff Turma",
+        "I can't believe one of the gods we worship, one of the Six, just... gave up on us. Doesn't care. It... doesn't feel right. | Lady Kasmeer Meade",
+        "A council actually making a practical and timely desicion? Call the town crier - this has to be a first. | Rytlock Brimstone",
+        "You've build a marvelous casino, Zalambur. My troops have been enjoying it. And now they will enjoy razing it to the ground. | Archon Iberu",
+        "I'm full of unwise ideas. But protecting the living from an undead army isn't one of them. | Catrine Evenstead",
+        "I still hear the screams - I ran when it started, and... Oh, Dwayna forgive me. I'm a coward. I should've died with them. |  a refugee near Amnoon",
             "It's a madhouse in the lab now. They're giving tours. Tours! Ugh. | Taimi",
             "While my freedom's been gratifying, it's also a little boring. This is much more interesting. Besides, I may have made a wager that the slayer of Elder Dragons can take down a god - and I intend to collect. | Canach",
             "These people aren't warriors. Unlike you, they see challenging a god as certain death. So they prefer to run... and live. | Shadows Agent Kito",
@@ -65,29 +66,37 @@ public class Ukol02Controller {
             "King Palawa Joko, father of the United Kingdom of Elona, accepts your collective nightly well-wishes, spoken or implied. | Awakened Affirmation System",
             "Should the first light of this day be your last, rest easy in the knowledge you’ll be Awakened in the name of Palawa Joko. | Awakened Affirmation System",
             "Welcome to Vehjin. Please consider my palace, your palace. And if there is anything I can do for you, you need only ask with a bit of bowing and scraping. | Prince Bakkal",
-            "I've worn the same pants for nine days straight! Oh. I'm...not sure why I'm saying that out loud. | Elonian Royal",
+            "I've worn the same pants for nine days straight! Oh. I'm... not sure why I'm saying that out loud. | Elonian Royal",
             "I've formed a plan to defeat the Forged. I just need acorns. Lots and lots of acorns.  | Elonian Royal"
             );
 
-    
+    private int pocetObrazku = 66;
+
+
     @RequestMapping("/novyindex.html")
     public ModelAndView zobrazStranku() {
         ModelAndView drzakNaDataAJmenoStranky;
         drzakNaDataAJmenoStranky = new ModelAndView("Ukol02-template");
-
         Random generatorNahodnychCisel = new Random();
+
         int cisloTextu = generatorNahodnychCisel.nextInt(TEXTY.size());
 
         String text = TEXTY.get(cisloTextu);
         int delitko = text.indexOf("|");
         String citace = new String ("\"");
         citace += text.substring(0, delitko);
+        text.trim();
         citace += "\"";
         String autor = new String ("- ");
         autor += text.substring(delitko+1);
-        
         drzakNaDataAJmenoStranky.addObject("citace", citace);
         drzakNaDataAJmenoStranky.addObject("autor", autor);
+
+        int cisloObrazku = generatorNahodnychCisel.nextInt(pocetObrazku)+1;
+        String cestaObrazku = new String ("./images/pics/pic");
+        cestaObrazku += new String().format("%02d", cisloObrazku);
+        cestaObrazku += ".jpg";
+        drzakNaDataAJmenoStranky.addObject("obrazek", cestaObrazku);
        
         return drzakNaDataAJmenoStranky;
     }

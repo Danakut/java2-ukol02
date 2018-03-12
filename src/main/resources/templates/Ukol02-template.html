@@ -12,23 +12,27 @@
     <title>Ukol02 - meme generator</title>
 </head>
 <body>
-
     <header>
         <div class="header">
-            <p>In memory and anticipation of the newest episode of <strong>Living World: Season 4</strong>.</p>
+            <p>In memory and anticipation of the newest episode of <strong>Living World: Season 4</strong> in Guild Wars 2.</p>
             <br>
-            <p>The one which, sadly, I have currently no time to play through.</p>
-            <h1>A Bug in the System</h1>
-            <h2>a pic &amp quote generator for the Java 2 course</h2>
+            <p>The one that, sadly, I have currently no time to play through.</p>
+            <a href="./index.html">
+                <div class="home">
+                    <h1>A Bug in the System</h1>
+                    <h2>a pic &amp quote generator for the Java 2 course</h2>
+                </div>
+            </a>
         </div>
     </header>
-
-    <main>
-        <div id="button_anchor" class="main_content">
-            <a href="novyindex.html#button_anchor">     <!-- aby nebylo nutne rolovat po kazdem reloadu z horniho konce stranky az k obrazku-->
+    <main id="button_anchor">
+        <div class="main_content">
+            <!-- tlacitko, ktere nefunguje, protoze zatim neumim vynutit reload stranky
+            <a href="novyindex#button_anchor">
                 <div class="button">
                 </div>
             </a>
+            -->
             <div class="image">
                 <div class="caption">
                     <!--/*@thymesVar id="citace" type="java.lang.String"*/-->
@@ -36,12 +40,15 @@
                     <!--/*@thymesVar id="autor" type="java.lang.String"*/-->
                     <h4 th:text="${autor}">And here is the author of the quote.</h4>
                 </div>
-                <img src="./images/mappic5.jpg">
+                <!--/*@thymesVar id="obrazek" type="java.lang.String"*/-->
+                <img th:src="${obrazek}" src="nejakaCesta/nejakyObrazek">
             </div>
         </div>
     </main>
     <footer>
+        <div class="footer">
+            <p>Dana Kutálková, III/2018</p>
+        </div>
     </footer>
-
 </body>
 </html>

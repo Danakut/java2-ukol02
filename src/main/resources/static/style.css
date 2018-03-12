@@ -50,11 +50,30 @@ body {
     text-align: center;
 }
 
+.header a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
 .main_content {
-    margin: 60px auto;
+    padding: 0;
+    margin: 100px auto;
     width: calc(100% - 60px);
     max-width: 1600px;
 }
+
+p.index_page {
+    width: 60%;
+    max-width: 700px;
+    margin: 0 auto;
+    color: rgba(255, 109, 16, 0.8);
+    /*color: rgba(255, 236, 182, 0.4);   */
+    font-family: 'Raleway', sans-serif;
+    font-size:25px;
+    text-align: center;
+}
+
 
 .button {
     display: inline-block;
@@ -78,34 +97,35 @@ body {
     display: inline-block;
     position: relative;
     margin-left: 30px;
-    max-width: 1366px;
-    border: 3px solid #ffecb6;
-    border: 5px solid #ffecb6;
+    /*max-width: 1366px;        - varianta s tlacitkem */
+    width: 100%;
+    border: none;
 }
 
 .image img {
     width: 100%;
+    border: 5px solid #ffecb6;
 }
 
 .caption {
     position: absolute;
-    width: 50%;
+    width: 40%;
     padding: 10px;
     margin: 30px 0 0 30px;
     color: #fffae4;
     font-family: 'Raleway', sans-serif;
     font-size: 24px;
     border: none;
-
-}
-
-.caption:hover {
     background: rgba(255, 109, 16, 0.5);
     box-shadow: 5px 5px 20px 15px rgba(255, 109, 16, 0.3), -5px -5px 10px 15px rgba(255, 109, 16, 0.3);
-  }
+}
+
+/*.caption:hover {
+    background: rgba(255, 109, 16, 0.5);
+    box-shadow: 5px 5px 20px 15px rgba(255, 109, 16, 0.3), -5px -5px 10px 15px rgba(255, 109, 16, 0.3);
+  }     */
 
 .caption p {
-  
     margin: 10px;
     font-weight: 400;
     font-style: italic;
@@ -116,4 +136,20 @@ body {
     font-weight: 400;
     text-align: right;
 }
+
+.footer {
+    width: 100%;
+    height: 150px;
+    color: #ffecb6;
+    background: rgba(255, 109, 16, 0.05);
+    font-family: 'Poiret One', cursive;
+    font-size: 24px;
+    text-align: center;
+}
+
+.footer p {
+    position: relative;
+    top: calc(50% - 12px);
+}
+
 
