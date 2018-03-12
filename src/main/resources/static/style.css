@@ -212,6 +212,12 @@ p.index_page {
     }
 }
 
+@media (max-width: 900px) {
+    .caption {
+        width: 80%;
+    }
+}
+
 @media (max-width: 600px) {
 
     .header {
@@ -264,6 +270,7 @@ p.index_page {
 
     .caption p {
         margin-bottom: 5px;
+        font-weight: 400;
     }
 }
 

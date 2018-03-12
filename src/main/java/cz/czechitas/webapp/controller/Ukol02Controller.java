@@ -30,7 +30,7 @@ public class Ukol02Controller {
             "I feel trapped in this role... in this \"legacy\". I yearn for freedom, but I cannot turn away from these responsibilities. To do so would doom the mortal races to certain destruction. And perhaps myself as well. But then again... there is a kind of freedom in death, is there not? | Vlast",
             "The task is done. Now, let us all imagine Balthazar red-faced and frustrated over his failure to stop us. | Canach",
             "Sadly, Vlast matured in isolation. We didn't know how to socialize him properly until it was too late. By the time we realized Vlast needed to bond with mortal races as Glint had, he no longer could... nor cared to. | Sadizi",
-            "Liar! All who take breatch know me! I am King Joko the Inevitable, the last Primeval King, Joko the Undying, the Scourge of Vabbi. Joko the Feared, Joko the Beloved, Joko the Eternal Monarch of All. How dare you claim to not know who I am! | Palawa Joko",
+            "Liar! All who take breath know me! I am King Joko the Inevitable, the last Primeval King, Joko the Undying, the Scourge of Vabbi. Joko the Feared, Joko the Beloved, Joko the Eternal Monarch of All. How dare you claim to not know who I am! | Palawa Joko",
             "I was deceived by the fallen god Balthazar. I led him here to claim spirits for his army. In exchange, I was promised a share of his new recruits. But he betrayed me and stranded me here instead. Perfidy! From now on, the only god I trust is me. | Palawa Joko",
             "Some gods just need to have their immortality revoked. | Lady Kasmeer Meade",
             "Leading a borrowed army of corpses into battle against the god of war? Wish I'd known this was your plan when I bet on you at the casino. | Canach",
